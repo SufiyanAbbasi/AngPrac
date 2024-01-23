@@ -1,0 +1,14 @@
+<h2>Here is the items</h2>
+<div>
+    @for(item of items; track i; let i = $index ){
+       @defer {
+    <app-item id="i+1" /><br>
+        }@placeholder {
+            <div class="placeholder"></div>
+        }@loading {
+            <div class="placeholder">Loading.....</div>
+        }@error {
+            <div class="error"></div>
+        }
+    }
+</div>
