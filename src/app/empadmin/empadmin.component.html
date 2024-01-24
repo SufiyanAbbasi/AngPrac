@@ -1,0 +1,9 @@
+  <h1>Parent Component</h1>
+
+  <!-- parent to child  -->
+  Parent Component : <input type="text"  #Pcomponent (keyup)="0">
+  <app-employee [Pdata]="Pcomponent.value"></app-employee>
+
+
+   <!-- Child to Parent  -->
+  <!-- <app-employee (childEvent)="getData($event)"></app-employee> -->

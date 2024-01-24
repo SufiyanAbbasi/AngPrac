@@ -1,0 +1,78 @@
+<h1>This is Directive page</h1>
+<h1>Structural Directive</h1>
+<button (click)="login()">Login</button>
+<button (click)="logout()">Logout</button>
+<!-- if else  -->
+@if(isLoggedIn){
+    <p>User is logged In</p>
+}@else {
+    <p>User is logged Out</p>
+}
+
+<!-- switch case  -->
+@switch (name) {
+    @case ('ali') {
+        <p>Hello Ali</p>
+    }
+    @case ('asad') {
+        <p>Hello Asad</p>
+    }
+    @case ('sufi') {
+        <p>Hello sufi</p>
+    }
+    @default {
+        <p>Name Invalid</p>
+    }
+
+}
+ <!-- @for directive   -->
+ @for(emp of employees; track emp.id){
+   <ul>
+    <li>{{emp.id}} -- {{emp.name}}</li>
+   </ul>
+ }@empty {
+    <p>Sorry No Items</p>
+ }
+ <!-- using same example and make it with table  -->
+ <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    @for(emp of employees; track emp.id){
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+        </tr>
+    }@empty {
+        <tr>
+            <td><p>No data Found</p></td>
+            <td><p>No data Found</p></td>
+        </tr>
+    }
+ </table>
+
+
+ <h1>Attribute Directive</h1>
+ <!-- ng style   -->
+ @for(em of employees1; track em.id){
+    <ul >
+        <li [ngStyle]="{'background-color': getcolor (em.country)}" >Name: {{em.name}} |  Country:{{em.country}}</li>
+    </ul>
+ }
+
+ <!-- ngclass  -->
+ <!-- ngclass with string -->
+ <div class="one">Imran khan</div>
+ <div [ngClass]="'one three'">Imran khan</div>
+
+
+ <!-- ngclass with Array -->
+ <!-- with array you can seperate classs name with (,) -->
+ <div [ngClass]="['two', 'four']">Salman Abbasi</div>
+
+
+ <!-- ngclass with Object-->
+ <!-- in object you can add true or false  -->
+ <div [ngClass]="{'one': true, 'three': true}">Something</div>
+ <div [ngClass]="{'one': false, 'three': true}">Something</div>

@@ -1,3 +1,28 @@
 .myapp{
     text-align: center;
 }
+ul{
+    background-color: rgb(159, 206, 206);
+    padding: 20px 0px;
+    border-radius: 30px;
+
+}
+li{
+   list-style: none;
+    padding-top: 10px;
+    display: inline;
+    margin: 20px;
+}
+ul li a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+ul li a:hover{
+    color: brown;
+}
+.active{
+    color: red;
+    font-weight: bolder;
+}

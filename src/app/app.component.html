@@ -1,17 +1,17 @@
 <div class="myapp">
   <h1>This is Angular 17 Practice Course</h1>
+  <ul>
+   <li><a routerLink="directprac"  routerLinkActive="active">Directive Practice Page</a></li> 
+   <li> <a routerLink="appitem"  routerLinkActive="active">Item List </a> </li> 
+   <li> <a routerLink="empadmin" routerLinkActive="active"> Parent-Child Data Passing</a> </li> 
+  </ul>
+
+
+  
   <!-- <p>
     preserve white space set the space according as you given in your html with spaces
   </p>
   <button>Add</button> <button>Submit</button> <button>Sign In</button> -->
-  <h1>Parent Component</h1>
 
-  <!-- parent to child  -->
-  <!-- Parent Component : <input type="text"  #Pcomponent (keyup)="0"> -->
-  <!-- <app-employee [Pdata]="Pcomponent.value"></app-employee> -->
-
-
-  <!-- // Child to Parent  -->
-  <app-employee (childEvent)="getData($event)"></app-employee>
-  <app-item-list></app-item-list>
 </div>
+<router-outlet></router-outlet>

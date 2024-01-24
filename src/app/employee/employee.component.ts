@@ -6,19 +6,14 @@ import { Component, EventEmitter } from '@angular/core';
   imports: [],
   templateUrl: './employee.component.html',
   styleUrl: './employee.component.css',
-
   // parent to child 
   inputs: ["Pdata"],
-
   // Child to Parent 
   outputs: ['childEvent']
 })
 export class EmployeeComponent {
   // parent to child 
   Pdata:any;
-
-
-
   // Child to Parent 
   childEvent = new EventEmitter();
   senddata(val: any) {
